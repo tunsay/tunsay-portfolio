@@ -1,7 +1,7 @@
 function Home() {
   return (
     <div className="container-Home">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores impedit
+      tLorem ipsum dolor sit amet consectetur adipisicing elit. Dolores impedit
       error eius eveniet alias nostrum. Laboriosam, quasi qui. Possimus pariatur
       consectetur veniam nihil dolorum similique voluptatibus voluptatem
       repellat quasi qui.
