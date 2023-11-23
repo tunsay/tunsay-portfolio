@@ -2,6 +2,7 @@ import Contact from './Contact'
 import Home from './Home'
 import Project from './Project'
 import Skills from './Skills'
+import './Main.css'
 import styles from './Main.module.scss'
 
 function Main() {
