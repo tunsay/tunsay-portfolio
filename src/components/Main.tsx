@@ -2,13 +2,11 @@ import Contact from './Contact'
 import Home from './Home'
 import Project from './Project'
 import Skills from './Skills'
-import './Main.css'
 import styles from './Main.module.scss'
 
 function Main() {
   return (
     <>
-      <div className="progress"></div>
       <main className="main">
         {/* Sections */}
         <section className={styles.home} id="home">
