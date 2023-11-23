@@ -1,11 +1,148 @@
 @import '../assets/styles/variables.scss';
 
 main {
+  font-size: 1rem;
   .home {
     height: $height;
   }
   .skills {
-    height: $height;
+    height: auto;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      height: 100%; /* Assurez-vous que la hauteur est définie à 100% */
+      &__grids {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 10px;
+        height: 100%; /* La hauteur s'ajuste à celle du skills__container */
+
+        &__item {
+          position: relative;
+          width: 250px;
+          background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 300px;
+          border-radius: 4px;
+          text-align: center;
+          overflow: hidden;
+          transition: 0.5s;
+          &__box {
+            &__percent {
+              position: relative;
+              width: 150px;
+              height: 150px;
+              border-radius: 50%;
+              box-shadow: inset 0 0 50px #000;
+              background: #222;
+              z-index: 1000;
+
+              &__num {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+              }
+              &__num h2 {
+                color: #777;
+                font-weight: 700;
+                font-size: 40px;
+                transition: 0.5s;
+              }
+              &__num h2 span {
+                color: #777;
+                font-size: 24px;
+                transition: 0.5s;
+              }
+            }
+            &__text {
+              position: relative;
+              color: #777;
+              margin-top: 20px;
+              font-weight: 700;
+              font-size: 18px;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              transition: 0.5s;
+            }
+          }
+        }
+        &__item:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+        &__item:hover h2 {
+          color: #fff;
+          font-size: 60px;
+        }
+        &__item:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -50%;
+          width: 100%;
+          height: 100%;
+          background: rgba(255, 255, 255, 0.03);
+          pointer-events: none;
+          z-index: 1;
+        }
+        &__item:nth-child(1) svg circle:nth-child(2) {
+          stroke-dashoffset: calc(440 - (440 * 85) / 100);
+        }
+        &__item:nth-child(2) svg circle:nth-child(2) {
+          stroke-dashoffset: calc(440 - (440 * 70) / 100);
+        }
+        &__item:nth-child(3) svg circle:nth-child(2) {
+          stroke-dashoffset: calc(440 - (440 * 65) / 100);
+        }
+        &__item:nth-child(4) svg circle:nth-child(2) {
+          stroke-dashoffset: calc(440 - (440 * 70) / 100);
+        }
+        &__item:nth-child(5) svg circle:nth-child(2) {
+          stroke-dashoffset: calc(440 - (440 * 65) / 100);
+        }
+        &__item:nth-child(6) svg circle:nth-child(2) {
+          stroke-dashoffset: calc(440 - (440 * 50) / 100);
+        }
+        svg circle:nth-child(2) {
+          stroke: rgb(207, 9, 42);
+          animation-duration: 6s;
+          animation-name: slidein;
+        }
+        @keyframes slidein {
+          from {
+            stroke-dashoffset: calc(440 - (440 * 0) / 100);
+          }
+        }
+      }
+    }
+    svg {
+      position: relative;
+      z-index: 1000;
+    }
+    svg circle {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: #191919;
+      stroke-width: 10;
+      stroke-linecap: round;
+      transform: translate(5px, 5px);
+    }
+    svg circle:nth-child(2) {
+      stroke-dasharray: 440;
+      stroke-dashoffset: 440;
+    }
   }
   .projects {
     height: $height;
