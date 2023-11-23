@@ -1,6 +1,6 @@
-* {
+/* * {
   box-shadow: 0 0 0 2px red inset;
-}
+} */
 
 body {
   margin: 0;
@@ -32,6 +32,7 @@ code {
   transform-origin: 0 50%;
   animation: scaleProgress auto linear;
   animation-timeline: scroll(root);
+  z-index: 10;
 }
 
 @keyframes scaleProgress {
