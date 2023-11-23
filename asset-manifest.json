@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tunsay-portfolio/static/css/main.5341d806.css",
-    "main.js": "/tunsay-portfolio/static/js/main.cba4b494.js",
+    "main.css": "/tunsay-portfolio/static/css/main.b9d0608c.css",
+    "main.js": "/tunsay-portfolio/static/js/main.49672025.js",
     "static/js/787.1dd47bd3.chunk.js": "/tunsay-portfolio/static/js/787.1dd47bd3.chunk.js",
     "index.html": "/tunsay-portfolio/index.html",
-    "main.5341d806.css.map": "/tunsay-portfolio/static/css/main.5341d806.css.map",
-    "main.cba4b494.js.map": "/tunsay-portfolio/static/js/main.cba4b494.js.map",
+    "main.b9d0608c.css.map": "/tunsay-portfolio/static/css/main.b9d0608c.css.map",
+    "main.49672025.js.map": "/tunsay-portfolio/static/js/main.49672025.js.map",
     "787.1dd47bd3.chunk.js.map": "/tunsay-portfolio/static/js/787.1dd47bd3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5341d806.css",
-    "static/js/main.cba4b494.js"
+    "static/css/main.b9d0608c.css",
+    "static/js/main.49672025.js"
   ]
 }
