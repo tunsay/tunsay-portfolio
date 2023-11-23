@@ -1,17 +1,19 @@
 import React from 'react'
-import './App.css'
+import './components/Header.css'
 /* router */
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './components/Main'
+import Header from './components/Header'
 
 function App() {
   return (
     <React.Fragment>
-      <HashRouter>
+      <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/" element={<Main />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </React.Fragment>
   )
 }
