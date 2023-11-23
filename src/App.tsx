@@ -8,7 +8,7 @@ import Header from './components/Header'
 function App() {
   return (
     <React.Fragment>
-      <BrowserRouter>
+      <BrowserRouter basename="/tunsay-portfolio">
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
