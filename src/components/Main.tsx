@@ -6,21 +6,24 @@ import styles from './Main.module.scss'
 
 function Main() {
   return (
-    <main className="main">
-      {/* Sections */}
-      <section className={styles.home} id="home">
-        <Home />
-      </section>
-      <section className={styles.skills} id="skills">
-        <Skills />
-      </section>
-      <section className={styles.projects} id="projects">
-        <Project />
-      </section>
-      <section className={styles.contact} id="contact">
-        <Contact />
-      </section>
-    </main>
+    <>
+      <div className="progress"></div>
+      <main className="main">
+        {/* Sections */}
+        <section className={styles.home} id="home">
+          <Home />
+        </section>
+        <section className={styles.skills} id="skills">
+          <Skills />
+        </section>
+        <section className={styles.projects} id="projects">
+          <Project />
+        </section>
+        <section className={styles.contact} id="contact">
+          <Contact />
+        </section>
+      </main>
+    </>
   )
 }
 
