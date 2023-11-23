@@ -1,0 +1,17 @@
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
