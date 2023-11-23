@@ -1,1 +1,16 @@
 @import '../assets/styles/variables.scss';
+
+main {
+  .home {
+    height: $height;
+  }
+  .skills {
+    height: $height;
+  }
+  .projects {
+    height: $height;
+  }
+  .contact {
+    height: $height;
+  }
+}

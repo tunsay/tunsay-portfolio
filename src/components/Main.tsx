@@ -1,23 +1,26 @@
-import logo from '../logo.svg'
+import Contact from './Contact'
+import Home from './Home'
+import Project from './Project'
+import Skills from './Skills'
+import styles from './Main.module.scss'
 
 function Main() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="main">
+      {/* Sections */}
+      <section className={styles.home} id="home">
+        <Home />
+      </section>
+      <section className={styles.skills} id="skills">
+        <Skills />
+      </section>
+      <section className={styles.projects} id="projects">
+        <Project />
+      </section>
+      <section className={styles.contact} id="contact">
+        <Contact />
+      </section>
+    </main>
   )
 }
 
