@@ -1,0 +1,12 @@
+.title-container {
+  display: block;
+  text-align: center;
+  position: relative;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 5px;
+  padding: 7px;
+  padding-left: 62px;
+}
