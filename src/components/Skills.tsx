@@ -3,10 +3,7 @@ import styles from './Main.module.scss'
 function Skills() {
   return (
     <div className={styles.skills__container}>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quis
-      possimus adipisci corrupti? Sint asperiores similique velit dolore
-      molestiae rem, architecto voluptatem eos fugit recusandae autem magnam?
-      Odit, voluptate dignissimos.
+      <h1 className={styles.skills__container__title}>Compétences</h1>
       <div className={styles.skills__container__grids}>
         <div className={styles.skills__container__grids__item}>
           <div className={styles.skills__container__grids__item__box}>
