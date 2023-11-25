@@ -2,16 +2,23 @@
 
 main {
   font-size: 1rem;
-  .home {
-    height: $height;
-  }
   .skills {
-    height: auto;
-
     &__container {
       display: flex;
       flex-direction: column;
       height: 100%; /* Assurez-vous que la hauteur est définie à 100% */
+      &__title {
+        display: block;
+        text-align: center;
+        position: relative;
+        font-size: 50px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 400;
+        letter-spacing: 5px;
+        padding: 7px;
+        padding-left: 62px;
+      }
       &__grids {
         display: grid;
         justify-items: center;
@@ -144,10 +151,10 @@ main {
       stroke-dashoffset: 440;
     }
   }
-  .projects {
-    height: $height;
-  }
+  .projects,
+  .skills,
   .contact {
-    height: $height;
+    height: auto;
+    padding: 50px 5px;
   }
 }
