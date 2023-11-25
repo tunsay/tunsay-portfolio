@@ -8,8 +8,8 @@ function Header() {
           <h2>Développeur Full stack</h2>
         </div>
         <nav className="navigation-links">
-          <a href="#skills">Compétences</a>
           <a href="#projects">Projets</a>
+          <a href="#skills">Compétences</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
