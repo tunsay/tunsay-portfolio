@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap');
 
+:root {
+  --height: 500px;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', Arial, sans-serif;
