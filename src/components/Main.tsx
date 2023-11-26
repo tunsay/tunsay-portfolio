@@ -2,8 +2,7 @@ import Contact from './Contact'
 import Home from './Home'
 import Project from './Project'
 import Skills from './Skills'
-import styles from './Main.module.scss'
-import './Home.css'
+import './Main.css'
 
 function Main() {
   return (
@@ -13,13 +12,13 @@ function Main() {
         <section className="home" id="home">
           <Home />
         </section>
-        <section className={styles.projects} id="projects">
+        <section className="projects" id="projects">
           <Project />
         </section>
-        <section className={styles.skills} id="skills">
+        <section className="skills" id="skills">
           <Skills />
         </section>
-        <section className={styles.contact} id="contact">
+        <section className="contact" id="contact">
           <Contact />
         </section>
       </main>
