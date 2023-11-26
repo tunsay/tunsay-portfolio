@@ -1,24 +1,18 @@
-import styles from './Main.module.scss'
+import './Skills.css'
 
 function Skills() {
   return (
-    <div className={styles.skills__container}>
-      <h1 className={styles.skills__container__title}>Compétences</h1>
-      <div className={styles.skills__container__grids}>
-        <div className={styles.skills__container__grids__item}>
-          <div className={styles.skills__container__grids__item__box}>
-            <div
-              className={styles.skills__container__grids__item__box__percent}
-            >
+    <div className="container-project">
+      <h1 className="title-container">Compétences</h1>
+      <div className="grids">
+        <div className="item">
+          <div className="box">
+            <div className="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70"></circle>
               </svg>
-              <div
-                className={
-                  styles.skills__container__grids__item__box__percent__num
-                }
-              >
+              <div className="num">
                 <img
                   width="96"
                   height="96"
@@ -27,25 +21,17 @@ function Skills() {
                 />
               </div>
             </div>
-            <h3 className={styles.skills__container__grids__item__box__text}>
-              Html
-            </h3>
+            <h2>Html</h2>
           </div>
         </div>
-        <div className={styles.skills__container__grids__item}>
-          <div className={styles.skills__container__grids__item__box}>
-            <div
-              className={styles.skills__container__grids__item__box__percent}
-            >
+        <div className="item">
+          <div className="box">
+            <div className="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70"></circle>
               </svg>
-              <div
-                className={
-                  styles.skills__container__grids__item__box__percent__num
-                }
-              >
+              <div className="num">
                 <img
                   width="96"
                   height="96"
@@ -54,25 +40,17 @@ function Skills() {
                 />
               </div>
             </div>
-            <h3 className={styles.skills__container__grids__item__box__text}>
-              PHP
-            </h3>
+            <h2>PHP</h2>
           </div>
         </div>
-        <div className={styles.skills__container__grids__item}>
-          <div className={styles.skills__container__grids__item__box}>
-            <div
-              className={styles.skills__container__grids__item__box__percent}
-            >
+        <div className="item">
+          <div className="box">
+            <div className="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70"></circle>
               </svg>
-              <div
-                className={
-                  styles.skills__container__grids__item__box__percent__num
-                }
-              >
+              <div className="num">
                 <img
                   width="64"
                   height="64"
@@ -81,25 +59,17 @@ function Skills() {
                 />
               </div>
             </div>
-            <h3 className={styles.skills__container__grids__item__box__text}>
-              SQL
-            </h3>
+            <h2>SQL</h2>
           </div>
         </div>
-        <div className={styles.skills__container__grids__item}>
-          <div className={styles.skills__container__grids__item__box}>
-            <div
-              className={styles.skills__container__grids__item__box__percent}
-            >
+        <div className="item">
+          <div className="box">
+            <div className="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70"></circle>
               </svg>
-              <div
-                className={
-                  styles.skills__container__grids__item__box__percent__num
-                }
-              >
+              <div className="num">
                 <img
                   width="96"
                   height="96"
@@ -108,25 +78,17 @@ function Skills() {
                 />
               </div>
             </div>
-            <h3 className={styles.skills__container__grids__item__box__text}>
-              Javascript
-            </h3>
+            <h2>Javascript</h2>
           </div>
         </div>
-        <div className={styles.skills__container__grids__item}>
-          <div className={styles.skills__container__grids__item__box}>
-            <div
-              className={styles.skills__container__grids__item__box__percent}
-            >
+        <div className="item">
+          <div className="box">
+            <div className="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70"></circle>
               </svg>
-              <div
-                className={
-                  styles.skills__container__grids__item__box__percent__num
-                }
-              >
+              <div className="num">
                 <img
                   width="80"
                   height="80"
@@ -135,25 +97,17 @@ function Skills() {
                 />
               </div>
             </div>
-            <h3 className={styles.skills__container__grids__item__box__text}>
-              REACT
-            </h3>
+            <h2>REACT</h2>
           </div>
         </div>
-        <div className={styles.skills__container__grids__item}>
-          <div className={styles.skills__container__grids__item__box}>
-            <div
-              className={styles.skills__container__grids__item__box__percent}
-            >
+        <div className="item">
+          <div className="box">
+            <div className="percent">
               <svg>
                 <circle cx="70" cy="70" r="70"></circle>
                 <circle cx="70" cy="70" r="70"></circle>
               </svg>
-              <div
-                className={
-                  styles.skills__container__grids__item__box__percent__num
-                }
-              >
+              <div className="num">
                 <img
                   width="96"
                   height="96"
@@ -162,9 +116,7 @@ function Skills() {
                 />
               </div>
             </div>
-            <h3 className={styles.skills__container__grids__item__box__text}>
-              symfony
-            </h3>
+            <h2>symfony</h2>
           </div>
         </div>
       </div>
