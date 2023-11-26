@@ -1,0 +1,50 @@
+main {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+}
+.projects {
+}
+.contact {
+}
+
+.title-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.projects,
+.skills,
+.contact,
+.home {
+  height: auto;
+  padding: 50px 0;
+  width: 75%;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    color: red;
+  }
+  .title-container {
+    font-size: 25px;
+  }
+  .projects,
+  .skills,
+  .contact,
+  .home {
+    height: auto;
+    padding: 25px 0;
+    width: 90%;
+  }
+}
