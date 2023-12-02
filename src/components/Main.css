@@ -5,13 +5,6 @@ main {
   align-items: center;
 }
 
-.skills {
-}
-.projects {
-}
-.contact {
-}
-
 .title-container {
   display: flex;
   text-align: center;
@@ -47,4 +40,12 @@ main {
     padding: 25px 0;
     width: 90%;
   }
+}
+
+.skills {
+}
+.projects {
+}
+.contact {
+  height: 1000px;
 }
