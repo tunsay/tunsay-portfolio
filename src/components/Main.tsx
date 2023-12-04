@@ -2,7 +2,7 @@ import Contact from './Contact'
 import Home from './Home'
 import Project from './Project'
 import Skills from './Skills'
-import './Main.css'
+import './Main.scss'
 
 function Main() {
   return (
