@@ -1,14 +1,25 @@
-.header-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import './variables.scss';
 
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 60%;
+  justify-content: space-around;
+  position: fixed;
+  background-color: $primary-color;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.personal-info {
+  margin: 0;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {
