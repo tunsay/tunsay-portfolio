@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 main {
   font-size: 15px;
   display: flex;
@@ -21,7 +23,7 @@ main {
 .contact,
 .home {
   height: auto;
-  padding: 50px 0;
+  padding-top: $top;
   width: 75%;
 }
 
@@ -38,14 +40,5 @@ main {
   .home {
     height: auto;
     padding: 25px 0;
-    width: 90%;
   }
-}
-
-.skills {
-}
-.projects {
-}
-.contact {
-  height: 1000px;
 }
