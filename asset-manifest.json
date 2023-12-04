@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tunsay-portfolio/static/css/main.9d9bf40a.css",
-    "main.js": "/tunsay-portfolio/static/js/main.94aa995a.js",
+    "main.css": "/tunsay-portfolio/static/css/main.c03d099d.css",
+    "main.js": "/tunsay-portfolio/static/js/main.27191515.js",
     "static/js/787.1dd47bd3.chunk.js": "/tunsay-portfolio/static/js/787.1dd47bd3.chunk.js",
-    "static/media/avatar.png": "/tunsay-portfolio/static/media/avatar.0ba3f61bb114f5a953a9.png",
+    "static/media/me.png": "/tunsay-portfolio/static/media/me.f3bfdd541821fccb90db.png",
     "index.html": "/tunsay-portfolio/index.html",
-    "main.9d9bf40a.css.map": "/tunsay-portfolio/static/css/main.9d9bf40a.css.map",
-    "main.94aa995a.js.map": "/tunsay-portfolio/static/js/main.94aa995a.js.map",
+    "main.c03d099d.css.map": "/tunsay-portfolio/static/css/main.c03d099d.css.map",
+    "main.27191515.js.map": "/tunsay-portfolio/static/js/main.27191515.js.map",
     "787.1dd47bd3.chunk.js.map": "/tunsay-portfolio/static/js/787.1dd47bd3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d9bf40a.css",
-    "static/js/main.94aa995a.js"
+    "static/css/main.c03d099d.css",
+    "static/js/main.27191515.js"
   ]
 }
