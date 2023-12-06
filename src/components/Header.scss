@@ -12,6 +12,11 @@ header {
   width: 100%;
 }
 
+header h1,
+header h2 {
+  margin: 0;
+}
+
 .personal-info {
   margin: 0;
 }
@@ -42,5 +47,9 @@ nav a:hover {
     flex-direction: column;
     width: 100%;
     align-items: center;
+  }
+  nav a {
+    margin: 1px;
+    padding-top: 10px;
   }
 }
