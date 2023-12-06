@@ -2,8 +2,7 @@
   box-shadow: 0 0 0 2px red inset;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Oswald&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -12,11 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgb(20, 20, 20);
   color: white;
-}
-
-h1,
-h2 {
-  margin: 0;
 }
 
 html {
@@ -29,6 +23,11 @@ a:focus,
 a:active {
   text-decoration: none;
   color: white;
+}
+
+p {
+  font-size: large;
+  font-weight: 200;
 }
 
 code {
