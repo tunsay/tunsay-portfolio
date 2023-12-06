@@ -1,13 +1,15 @@
 .container-skills {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%; /* Assurez-vous que la hauteur est définie à 100% */
 }
 .grids {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
+  width: 100%;
   height: 100%; /* La hauteur s'ajuste à celle du skills__container */
 }
 .item {
@@ -34,7 +36,6 @@
   border-radius: 50%;
   box-shadow: inset 0 0 50px #000;
   background: #222;
-  z-index: 1000;
 }
 .box .num {
   position: absolute;
@@ -65,33 +66,49 @@
   color: #fff;
 }
 .item:nth-child(1) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
-.item:nth-child(2) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
-.item:nth-child(2) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
-.item:nth-child(3) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 100) / 100);
 }
+.item:nth-child(2) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 100) / 100);
+}
+.item:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 76) / 100);
+}
 .item:nth-child(4) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+  stroke-dashoffset: calc(440 - (440 * 68) / 100);
 }
 .item:nth-child(5) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 85) / 100);
 }
 .item:nth-child(6) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 68) / 100);
+}
+.item:nth-child(7) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 50) / 100);
+}
+.item:nth-child(8) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 50) / 100);
+}
+.tools-web .item:nth-child(1) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+}
+.tools-web .item:nth-child(2) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+}
+.tools-web .item:nth-child(3) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+}
+.tools-web .item:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+}
+.tools-web .item:nth-child(4) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+}
+.tools-web .item:nth-child(6) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 85) / 100);
 }
 svg circle:nth-child(2) {
   stroke: rgb(207, 9, 42);
-}
-
-svg {
-  position: relative;
-  z-index: 2;
 }
 svg circle {
   width: 100%;
