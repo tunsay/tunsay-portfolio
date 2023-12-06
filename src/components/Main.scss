@@ -16,6 +16,7 @@ main {
   color: #fff;
   font-weight: 400;
   letter-spacing: 5px;
+  margin-bottom: 100px;
 }
 
 .projects,
@@ -28,17 +29,15 @@ main {
 }
 
 @media screen and (max-width: 1024px) {
-  main {
-    color: red;
-  }
   .title-container {
     font-size: 25px;
+    margin-bottom: 50px;
   }
   .projects,
   .skills,
   .contact,
   .home {
     height: auto;
-    padding: 25px 0;
+    width: 100%;
   }
 }
