@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:ital,wght@0,200;1,200&display=swap');
 
 .home {
   height: var(--height);
@@ -29,6 +30,7 @@
 }
 
 .profil {
+  z-index: 1;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -38,8 +40,8 @@
   background-repeat: no-repeat;
   border-radius: 50%;
   overflow: hidden;
-  height: 280px;
-  width: 280px;
+  height: 400px;
+  width: 400px;
   position: relative;
   top: -5rem;
   background-image: url(../assets/me.png);
@@ -54,6 +56,11 @@
   border-radius: 50%;
   padding: 3vh;
   z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+
+.cv:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .home-avatar img {
@@ -75,18 +82,133 @@
   width: 50%;
 }
 
+.title-perso {
+  text-transform: uppercase;
+  font-size: x-large;
+  letter-spacing: 7px;
+  font-family: 'Oswald', sans-serif;
+}
+
 .about-absolute {
+  z-index: -1;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  display: inline-block;
+  top: 0;
+  left: 0;
   color: rgba(255, 255, 255, 0.15);
   text-transform: uppercase;
   font-size: 150px;
   font-weight: 900;
 }
 
+.mail-circle {
+  box-shadow: white 0 0 0 2px inset;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 75px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.mail-circle:hover {
+  max-width: 300px;
+}
+
+.my-mail {
+  overflow: hidden;
+  align-self: center;
+  width: 0;
+  padding-left: 0;
+}
+
+.mail-circle:hover .my-mail {
+  width: auto;
+  padding-left: 10%;
+}
+
+.mail-circle img {
+  color: white;
+}
+
+.circle {
+  box-shadow: white 0 0 0 2px inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  max-width: 75px;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.material-symbols-outlined.mail-icon {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-size: 45px;
+  /* Add other styles as needed */
+}
+
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 250px;
+}
+
+.marquee span {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 30px;
+  color: rgba(250, 235, 215, 0.25);
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 150s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .home-container {
     flex-direction: column;
+  }
+  .home-left,
+  .home-right {
+    width: 90%;
+  }
+  .home-left-infos {
+    position: relative;
+    top: 80px;
+  }
+  .profil {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 1px;
+  }
+  .about-absolute {
+    transform: rotate(90deg);
+    right: 100px;
+    top: -200px;
+  }
+  .marquee {
+    top: 150px;
+  }
+
+  .marquee span {
+    animation: marquee 500s linear infinite;
+  }
+
+  .mail-circle:hover {
+    width: 100%;
   }
 }
