@@ -7,7 +7,7 @@
 .grids {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 10px;
   width: 100%;
   height: 100%; /* La hauteur s'ajuste à celle du skills__container */
@@ -89,24 +89,10 @@
 .item:nth-child(8) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 50) / 100);
 }
-.tools-web .item:nth-child(1) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
+.tools-web .item svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 100) / 100);
 }
-.tools-web .item:nth-child(2) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
-.tools-web .item:nth-child(3) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
-.tools-web .item:nth-child(4) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
-.tools-web .item:nth-child(4) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
-.tools-web .item:nth-child(6) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 85) / 100);
-}
+
 svg circle:nth-child(2) {
   stroke: rgb(207, 9, 42);
 }
