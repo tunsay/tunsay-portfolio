@@ -14,7 +14,7 @@ main {
   font-size: 50px;
   text-transform: uppercase;
   color: #fff;
-  font-weight: 400;
+  font-weight: 100;
   letter-spacing: 5px;
   margin-bottom: 100px;
 }
@@ -25,7 +25,7 @@ main {
 .home {
   height: auto;
   padding-top: $top;
-  width: 75%;
+  width: 85%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -38,6 +38,6 @@ main {
   .contact,
   .home {
     height: auto;
-    width: 100%;
+    width: 90%;
   }
 }
