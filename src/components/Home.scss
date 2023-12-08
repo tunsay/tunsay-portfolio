@@ -101,7 +101,12 @@
   font-weight: 900;
 }
 
-.mail-circle {
+.social {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-circle {
   box-shadow: white 0 0 0 2px inset;
   height: 75px;
   display: flex;
@@ -110,31 +115,34 @@
   max-width: 75px;
   border-radius: 50px;
   transition: all 0.2s ease-in-out;
+  margin-right: 10px;
 }
 
-.mail-circle:hover {
+.social-circle:hover {
   max-width: 300px;
 }
 
-.my-mail {
+.my-social {
   overflow: hidden;
   align-self: center;
   width: 0;
   padding-left: 0;
 }
 
-.mail-circle:hover .my-mail {
-  width: auto;
+.social-circle:hover .my-social {
+  width: 100%;
   padding-left: 10%;
+  transition-delay: 0.2s;
 }
 
-.mail-circle img {
+.social-circle img {
   color: white;
 }
 
 .circle {
   box-shadow: white 0 0 0 2px inset;
   display: flex;
+  background: $primary-color;
   justify-content: center;
   align-items: center;
   height: 75px;
@@ -144,10 +152,21 @@
   transition: all 0.2s ease-in-out;
 }
 
-.material-symbols-outlined.mail-icon {
-  font-family: 'Material Symbols Outlined', sans-serif;
-  font-size: 45px;
-  /* Add other styles as needed */
+.social-circle:nth-child(1):hover {
+  background: rgba(137, 43, 226, 0.25);
+}
+.social-circle:nth-child(2):hover {
+  background: rgba(64, 76, 238, 0.25);
+}
+
+// .material-symbols-outlined.mail-icon {
+//   font-family: 'Material Symbols Outlined', sans-serif;
+//   font-size: 45px;
+//   /* Add other styles as needed */
+// }
+
+.custom-icon {
+  font-size: 28px;
 }
 
 .marquee {
@@ -180,6 +199,7 @@
 @media screen and (max-width: 1024px) {
   .home-container {
     flex-direction: column;
+    text-align: center;
   }
   .home-left,
   .home-right {

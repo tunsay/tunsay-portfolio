@@ -1,5 +1,7 @@
 import './Home.scss'
 import { Parallax } from 'react-scroll-parallax'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function Home() {
   return (
@@ -34,13 +36,34 @@ function Home() {
           </div>
           <div className="social-perso"></div>
           <h2 className="title-perso">Contact Moi !</h2>
-          <div className="mail-circle">
-            <span className="my-mail">tuna.saygili@live.fr</span>
-            <div className="circle">
-              <span className="material-symbols-outlined mail-icon">mail</span>
+          <div className="social">
+            <div className="social-circle">
+              <a
+                href="https://github.com/tunsay"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="my-social"
+              >
+                Allez sur ma page Github
+              </a>
+              <div className="circle">
+                <FontAwesomeIcon icon={faGithub} className="custom-icon" />
+              </div>
+            </div>
+            <div className="social-circle">
+              <a
+                href="https://www.linkedin.com/in/tuna-saygili/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="my-social"
+              >
+                Allez voir mon profil Linkedin
+              </a>
+              <div className="circle">
+                <FontAwesomeIcon icon={faLinkedin} className="custom-icon" />
+              </div>
             </div>
           </div>
-          {/* <p>Email: tuna.saygili@live.fr</p> */}
         </Parallax>
       </div>
       <p className="marquee">
