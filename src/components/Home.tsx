@@ -9,7 +9,8 @@ function Home() {
       <div className="home-left">
         <div className="home-left-infos">
           <a
-            href="tunsay-portfolio/src/assets/cv-tuna-saygili.pdf"
+            href="/cv-tuna-saygili.pdf"
+            download={'cv-Tuna-Saygili.pdf'}
             className="cv"
             target="_blank"
             title="Encore un peu plus de moi."
