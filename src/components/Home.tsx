@@ -36,7 +36,6 @@ function Home() {
             </p>
           </div>
           <div className="social-perso"></div>
-          <h2 className="title-perso">Contact Moi !</h2>
           <div className="social">
             <div className="social-circle">
               <a
