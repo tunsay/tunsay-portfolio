@@ -1,5 +1,42 @@
+.container-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10dvh;
+}
+
+.mail,
+.num {
+  display: flex;
+  font-size: 6dvh;
+  font-weight: 100;
+}
+
+.icon-mail {
+  transition: all 0.2s ease-in-out;
+  padding-right: 1dvh;
+}
+.mail:hover .icon-mail {
+  padding-left: 100px;
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .container-contact {
+    padding-bottom: 5dvh;
+  }
+  .mail,
+  .num {
+    font-size: 5dvh;
+  }
 }
 
 @media screen and (max-width: 1023px) {
+  .container-contact {
+    padding-bottom: 3dvh;
+  }
+  .mail,
+  .num {
+    font-size: 3dvh;
+  }
 }
