@@ -51,6 +51,16 @@
   text-transform: uppercase;
 }
 
+.link-github:nth-child(1) {
+  margin-right: 1dvh;
+}
+.link-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
 .link-github:hover {
   background: rgba(255, 255, 255, 0.5);
   color: black;
