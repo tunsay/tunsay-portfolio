@@ -19,9 +19,9 @@ const ParralaxSoccer = () => {
       <Parallax
         translateX={['-1500px', '0px', 'easeOutQuint']}
         translateY={['0px', '0px', 'easeInQuint']}
-        rotate={[23, 360]}
+        rotate={[0, 360]}
         easing={'ease'}
-        scale={[5, 1]}
+        scale={[1, 0.76]}
       >
         <span>
           <img className="ball" src={ball} alt="" />
