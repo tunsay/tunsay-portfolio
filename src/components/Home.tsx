@@ -2,8 +2,25 @@ import './Home.scss'
 import { Parallax } from 'react-scroll-parallax'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { useEffect, useState } from 'react'
 
 function Home() {
+  const [isParallaxVisible, setIsParallaxVisible] = useState(true)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsParallaxVisible(window.innerWidth > 1024)
+    }
+    // Ajoutez un écouteur d'événement pour les changements de taille d'écran
+    window.addEventListener('resize', handleResize)
+    // Appelez la fonction handleResize une fois au montage pour définir l'état initial
+    handleResize()
+    // Nettoyez l'écouteur d'événement lors du démontage du composant
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, []) // Le tableau de dépendances vide assure que le hook useEffect s'exécute une seule fois au montage
+
   return (
     <div className="home-container">
       <div className="home-left">
@@ -19,10 +36,12 @@ function Home() {
           </a>
           <div className="profil"></div>
         </div>
-        {/* <img src={avatar} alt="avatar qui ressemble à Touna" /> */}
       </div>
       <div className="home-right">
-        <Parallax speed={5} translateY={['-100px', '100px']}>
+        <Parallax
+          speed={5}
+          translateY={isParallaxVisible ? ['-100px', '100px'] : [0, 0]}
+        >
           <span className="about-absolute">about</span>
           <h1 className="title-perso">Salut! C'est Tuna !</h1>
           <div className="desc-perso">
