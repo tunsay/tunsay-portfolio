@@ -1,22 +1,26 @@
 {
   "files": {
-    "main.css": "/tunsay-portfolio/static/css/main.f5dd7ef4.css",
-    "main.js": "/tunsay-portfolio/static/js/main.13ec82dd.js",
+    "main.css": "/tunsay-portfolio/static/css/main.58e424e8.css",
+    "main.js": "/tunsay-portfolio/static/js/main.65a1abb4.js",
     "static/js/787.1dd47bd3.chunk.js": "/tunsay-portfolio/static/js/787.1dd47bd3.chunk.js",
     "static/media/me.png": "/tunsay-portfolio/static/media/me.f3bfdd541821fccb90db.png",
+    "static/media/6.png": "/tunsay-portfolio/static/media/6.2019822bc60b3dba0982.png",
+    "static/media/cage.png": "/tunsay-portfolio/static/media/cage.475ac6573c95871e4705.png",
     "static/media/5.png": "/tunsay-portfolio/static/media/5.fb1f15fd4caa48484539.png",
     "static/media/3.png": "/tunsay-portfolio/static/media/3.c219e6500cd78ed639b0.png",
     "static/media/2.png": "/tunsay-portfolio/static/media/2.a3ef1aea76b4bea39b82.png",
     "static/media/4.png": "/tunsay-portfolio/static/media/4.3e0893d4aafb0b6c9fe9.png",
     "static/media/logo2.png": "/tunsay-portfolio/static/media/logo2.f742b8add78e2799a111.png",
+    "static/media/R.png": "/tunsay-portfolio/static/media/R.c9d5954e90d6edc90e8a.png",
+    "static/media/bartez.png": "/tunsay-portfolio/static/media/bartez.4b04ccb9712140c55aaa.png",
     "static/media/logo4.svg": "/tunsay-portfolio/static/media/logo4.837414860efdf652f26ae7be654e06c5.svg",
     "index.html": "/tunsay-portfolio/index.html",
-    "main.f5dd7ef4.css.map": "/tunsay-portfolio/static/css/main.f5dd7ef4.css.map",
-    "main.13ec82dd.js.map": "/tunsay-portfolio/static/js/main.13ec82dd.js.map",
+    "main.58e424e8.css.map": "/tunsay-portfolio/static/css/main.58e424e8.css.map",
+    "main.65a1abb4.js.map": "/tunsay-portfolio/static/js/main.65a1abb4.js.map",
     "787.1dd47bd3.chunk.js.map": "/tunsay-portfolio/static/js/787.1dd47bd3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5dd7ef4.css",
-    "static/js/main.13ec82dd.js"
+    "static/css/main.58e424e8.css",
+    "static/js/main.65a1abb4.js"
   ]
 }
