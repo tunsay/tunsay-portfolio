@@ -8,3 +8,9 @@
 .footer p {
   font-weight: 100;
 }
+
+@media screen and (max-width: 1024px) {
+  .footer p {
+    font-size: small;
+  }
+}

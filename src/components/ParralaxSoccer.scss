@@ -1,0 +1,40 @@
+.soccer-parralax {
+  position: relative;
+  top: 75px;
+  height: 250px;
+  width: 100%;
+}
+
+.cage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.goal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: translate(30%, 50%);
+}
+
+.ball {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: translate(150%, 50%);
+  width: 56px;
+}
+
+@media screen and (max-width: 1024px) {
+  .cage {
+    width: -webkit-fill-available;
+  }
+}

@@ -1,16 +1,12 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:ital,wght@0,200;1,200&display=swap');
 
-.home {
-  height: var(--height);
-}
-
 .home-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  height: 960px;
+  height: 1280px;
 }
 
 .home-left {
@@ -159,12 +155,6 @@
   background: rgba(64, 76, 238, 0.25);
 }
 
-// .material-symbols-outlined.mail-icon {
-//   font-family: 'Material Symbols Outlined', sans-serif;
-//   font-size: 45px;
-//   /* Add other styles as needed */
-// }
-
 .custom-icon {
   font-size: 28px;
 }
@@ -196,10 +186,17 @@
   }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 2000px) {
+  .home-container {
+    height: 960px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .home-container {
     flex-direction: column;
     text-align: center;
+    height: 1100px;
   }
   .home-left,
   .home-right {

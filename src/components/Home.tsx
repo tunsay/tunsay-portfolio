@@ -22,7 +22,7 @@ function Home() {
         {/* <img src={avatar} alt="avatar qui ressemble à Touna" /> */}
       </div>
       <div className="home-right">
-        <Parallax speed={10} translateY={['-100px', '100px']}>
+        <Parallax speed={5} translateY={['-100px', '100px']}>
           <span className="about-absolute">about</span>
           <h1 className="title-perso">Salut! C'est Tuna !</h1>
           <div className="desc-perso">

@@ -3,12 +3,13 @@ import argentBankMockUp from '../assets/2.png'
 import petitPlatMockUp from '../assets/3.png'
 import sportSeeMockUp from '../assets/4.png'
 import kasaMockUp from '../assets/5.png'
+import flight from '../assets/6.png'
 import argentBankLogo from '../assets/logo2.png'
 import petitPlatLogo from '../assets/logo3.png'
 import sportSeeLogo from '../assets/logo4.svg'
 import kasaLogo from '../assets/logo5.png'
+import flightLogo from '../assets/logo6.png'
 import { Parallax } from 'react-scroll-parallax'
-import { useState } from 'react'
 
 interface ProjectItemProps {
   mockUpImage: string
@@ -16,6 +17,7 @@ interface ProjectItemProps {
   description: string
   urlGit: string
   urlGhPages: string
+  urlGhPages2: string | undefined
 }
 
 const projectItems = [
@@ -51,6 +53,15 @@ const projectItems = [
     urlGit: 'https://github.com/tunsay/p11_my_project_kasa',
     urlGhPages: 'https://tunsay.github.io/p11_my_project_kasa/',
   },
+  {
+    mockUpImage: flight,
+    logoImage: flightLogo,
+    description:
+      "Le projet consiste en un gestionnaire de réservations de voyages, où les utilisateurs peuvent effectuer une réservation et supprimer une réservation existante. Deux versions du projet ont été développées, l'une en JavaScript et l'autre en TypeScript, utilisant React et Redux pour la gestion de l'état global et des actions asynchrones. Les données des réservations sont stockées dans le store Redux, et chaque réservation est représentée par un objet avec des propriétés telles que la date, la destination, le nombre de personnes et la classe.",
+    urlGit: 'https://github.com/tunsay/Voyage-city-js-react-redux',
+    urlGhPages: 'https://tunsay.github.io/Voyage-city-js-react-redux',
+    urlGhPages2: 'https://tunsay.github.io/Voyage-city-typescript-react-redux',
+  },
 ]
 
 function ProjectItem({
@@ -59,10 +70,11 @@ function ProjectItem({
   description,
   urlGit,
   urlGhPages,
+  urlGhPages2,
 }: ProjectItemProps) {
   return (
     <div className="project-item">
-      <Parallax speed={5} scale={[0.9, 1.5]}>
+      <Parallax speed={5} scale={[0.9, 1.2]}>
         <div className="left">
           <img src={mockUpImage} alt="" />
         </div>
@@ -95,6 +107,16 @@ function ProjectItem({
               Voir Projet
             </a>
           )}
+          {urlGhPages2 && (
+            <a
+              className="link-github"
+              href={urlGhPages2}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              En TypeScript
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -113,6 +135,7 @@ function Project() {
           description={item.description}
           urlGit={item.urlGit}
           urlGhPages={item.urlGhPages}
+          urlGhPages2={item.urlGhPages2}
         />
       ))}
     </div>
