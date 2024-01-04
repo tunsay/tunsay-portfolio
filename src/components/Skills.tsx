@@ -55,6 +55,26 @@ function Skills() {
                 <img
                   width="96"
                   height="96"
+                  src="https://img.icons8.com/fluency/96/tailwind_css.png"
+                  alt="tailwind_css"
+                />
+              </div>
+            </div>
+            <h2>tailwind</h2>
+          </div>
+        </div>
+
+        <div className="item">
+          <div className="box">
+            <div className="percent">
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div className="num">
+                <img
+                  width="96"
+                  height="96"
                   src="https://img.icons8.com/pulsar-color/96/php.png"
                   alt="php"
                 />

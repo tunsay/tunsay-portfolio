@@ -26,8 +26,8 @@ function Home() {
       <div className="home-left">
         <div className="home-left-infos">
           <a
-            href={process.env.PUBLIC_URL + '/cv-tuna-saygili.pdf'}
-            download={'cv-Tuna-Saygili.pdf'}
+            href={process.env.PUBLIC_URL + '/Cv-Tuna-SAYGILI.pdf'}
+            download={'Cv-Tuna-SAYGILI.pdf'}
             className="cv"
             target="_blank"
             title="Encore un peu plus de moi."

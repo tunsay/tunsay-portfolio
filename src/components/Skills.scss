@@ -85,9 +85,12 @@
   stroke-dashoffset: calc(440 - (440 * 68) / 100);
 }
 .item:nth-child(7) svg circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 50) / 100);
+  stroke-dashoffset: calc(440 - (440 * 69) / 100);
 }
 .item:nth-child(8) svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 50) / 100);
+}
+.item:nth-child(9) svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 50) / 100);
 }
 .tools-web .item svg circle:nth-child(2) {
