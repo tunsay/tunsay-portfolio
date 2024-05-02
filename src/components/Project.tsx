@@ -114,7 +114,7 @@ function ProjectItem({
               target="_blank"
               rel="noopener noreferrer"
             >
-              En TypeScript
+              Voir Projet 2
             </a>
           )}
         </div>
