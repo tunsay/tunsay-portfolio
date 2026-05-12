@@ -47,12 +47,9 @@ function Home() {
           <h1 className="title-perso">Salut! C'est Tuna !</h1>
           <div className="desc-perso">
             <p>
-              Ma détermination et ma passion me poussent à développer mes
-              créations avec une attention particulière à l'expérience
-              utilisateur. Animé par une soif d'apprendre constante, je suis à
-              la recherche d'un emploi qui me permettra de progresser. Je suis
-              capable de créer, maquetter et développer le Front et le Back d'un
-              projet, grâce à ma multifonctionnalité.
+              Expert en cybersécurité, je sécurise, j’audite et j’analyse les systèmes avec une approche concrète et orientée résultats. Je maîtrise les audits applicatifs, l’OWASP, les tests de sécurité, la gestion des risques et les fondamentaux techniques (réseau, crypto, identité, TLS…).
+
+              Je suis animé par une veille constante, une vraie exigence technique et l’envie de renforcer la sécurité des organisations.
             </p>
           </div>
           <div className="social-perso"></div>
