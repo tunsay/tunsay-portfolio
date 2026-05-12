@@ -3,7 +3,7 @@ import Home from './Home'
 import Project from './Project'
 import Skills from './Skills'
 import './Main.scss'
-import ParralaxSoccer from './ParralaxSoccer'
+// import ParralaxSoccer from './ParralaxSoccer'
 
 function Main() {
   return (
@@ -34,7 +34,7 @@ function Main() {
         <section className="projects" id="projects">
           <Project />
         </section>
-        <ParralaxSoccer />
+        {/* <ParralaxSoccer /> */}
         <section className="skills" id="skills">
           <Skills />
         </section>

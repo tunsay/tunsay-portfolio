@@ -44,7 +44,8 @@ function Home() {
           translateY={isParallaxVisible ? ['-100px', '100px'] : [0, 0]}
         >
           <span className="about-absolute">about</span>
-          <h1 className="title-perso">Salut! C'est Tuna !</h1>
+          <h1 className="title-perso"> Expert en sécurité des
+            développements informatiques </h1>
           <div className="desc-perso">
             <p>
               Expert en cybersécurité, je sécurise, j’audite et j’analyse les systèmes avec une approche concrète et orientée résultats. Je maîtrise les audits applicatifs, l’OWASP, les tests de sécurité, la gestion des risques et les fondamentaux techniques (réseau, crypto, identité, TLS…).
