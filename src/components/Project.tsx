@@ -1,66 +1,72 @@
 import './Project.scss'
+import { ReactNode } from 'react'
 import { Parallax } from 'react-scroll-parallax'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons'
 import sinelianceLogo from '../assets/Sineliance.svg'
 import WorkflowDiagram from './WorkflowDiagram'
 import Realizations from './Realizations'
+import SoundRandomizerDemo from './SoundRandomizerDemo'
 
 interface ProjectItemProps {
-  mockUpImage: string
-  logoImage: string
+  mockUpImage?: string
+  mockUpComponent?: ReactNode
+  logoImage?: string
+  logoComponent?: ReactNode
   description: string
-  urlGit: string
-  urlGhPages: string
-  urlGhPages2: string | undefined
-}
-
-const projectItems: {
-  mockUpImage: string
-  logoImage: string
-  description: string
-  urlGit: string
-  urlGhPages: string
+  urlGit?: string
+  urlGhPages?: string
   urlGhPages2?: string
-}[] = [
-    {
-      mockUpImage: '',
-      logoImage: sinelianceLogo,
-      description:
-        "Sinéliance accompagne les entreprises dans la préservation et la transmission de leurs savoir-faire critiques. Le site vitrine présente les différentes offres et expertises pour éviter la perte de compétences et optimiser la gestion des connaissances.",
-      urlGit: '',
-      urlGhPages: 'https://www.sineliance.fr',
-    }
-  ]
+  children?: ReactNode
+}
 
 function ProjectItem({
   mockUpImage,
+  mockUpComponent,
   logoImage,
+  logoComponent,
   description,
   urlGit,
   urlGhPages,
   urlGhPages2,
+  children,
 }: ProjectItemProps) {
-  const hasMockup = !!mockUpImage
+  const hasLeft = !!mockUpImage || !!mockUpComponent
 
   return (
-    <div className={`project-item ${hasMockup ? '' : 'project-item--centered'}`}>
-      {hasMockup && (
-        <Parallax speed={5} scale={[0.9, 1.2]}>
-          <div className="left">
-            <img src={mockUpImage} alt="" />
-          </div>
-        </Parallax>
+    <div className={`project-item ${hasLeft ? '' : 'project-item--centered'}`}>
+      {hasLeft && (
+        mockUpComponent
+          ? <div className="left">{mockUpComponent}</div>
+          : (
+            <Parallax speed={5} scale={[0.9, 1.2]}>
+              <div className="left">
+                <img src={mockUpImage} alt="" />
+              </div>
+            </Parallax>
+          )
       )}
+
       <div className="right">
         <div className="logo">
-          <Parallax translateY={['-20px', '10px']} opacity={[0.4, 1]} easing="easeOutQuad">
-            <img src={logoImage} alt="" />
-          </Parallax>
+          {logoComponent
+            ? <Parallax translateY={['-20px', '10px']} opacity={[0.4, 1]} easing="easeOutQuad">
+                {logoComponent}
+              </Parallax>
+            : logoImage && (
+              <Parallax translateY={['-20px', '10px']} opacity={[0.4, 1]} easing="easeOutQuad">
+                <img src={logoImage} alt="" />
+              </Parallax>
+            )
+          }
         </div>
+
         <Parallax translateY={['20px', '0px']} opacity={[0.3, 1]} easing="easeOutQuad">
           <div className="desc">{description}</div>
         </Parallax>
-        <Realizations />
-        <WorkflowDiagram />
+
+        {children}
+
         <div className="link-row">
           {urlGit && (
             <a className="link-github" href={urlGit} target="_blank" rel="noopener noreferrer">
@@ -87,17 +93,38 @@ function Project() {
   return (
     <div className="container-project">
       <h1 className="title-container">Projets</h1>
-      {projectItems.map((item, index) => (
-        <ProjectItem
-          key={index}
-          mockUpImage={item.mockUpImage}
-          logoImage={item.logoImage}
-          description={item.description}
-          urlGit={item.urlGit}
-          urlGhPages={item.urlGhPages}
-          urlGhPages2={item.urlGhPages2}
-        />
-      ))}
+
+      <p className="project-section-label">
+        <span>Emploi actuel</span>
+        Sinéliance
+      </p>
+
+      <ProjectItem
+        logoImage={sinelianceLogo}
+        description="Sinéliance accompagne les entreprises dans la préservation et la transmission de leurs savoir-faire critiques. Le site vitrine présente les différentes offres et expertises pour éviter la perte de compétences et optimiser la gestion des connaissances."
+        urlGhPages="https://www.sineliance.fr"
+      >
+        <Realizations />
+        <WorkflowDiagram />
+      </ProjectItem>
+
+      <p className="project-section-label">
+        <span>Projet personnel</span>
+        Sound Randomizer
+      </p>
+
+      <ProjectItem
+        mockUpComponent={<SoundRandomizerDemo />}
+        logoComponent={
+          <div className="sound-logo">
+            <FontAwesomeIcon icon={faVolumeHigh} />
+            <span>Sound Randomizer</span>
+          </div>
+        }
+        description="Sélectionnez un dossier contenant des fichiers MP3 et le programme lancera automatiquement les pistes audio de façon aléatoire, dans un intervalle de temps configurable. Un projet personnel né d'un besoin réel."
+        urlGit="https://github.com/tunsay/Sound_Randomizer"
+        urlGhPages="https://tunsay.github.io/Sound_Randomizer/"
+      />
     </div>
   )
 }

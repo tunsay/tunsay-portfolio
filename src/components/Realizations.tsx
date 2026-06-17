@@ -98,7 +98,7 @@ function RealizationCard({ card }: { card: typeof cards[0] }) {
 function Realizations() {
   return (
     <div className="realizations">
-      <p className="realizations__subtitle">Principales réalisations</p>
+      <p className="realizations__subtitle">Mes réalisations</p>
       <div className="realizations__grid">
         {cards.map((card, i) => (
           <RealizationCard key={i} card={card} />
