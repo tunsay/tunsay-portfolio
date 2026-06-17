@@ -94,37 +94,39 @@ function Project() {
     <div className="container-project">
       <h1 className="title-container">Projets</h1>
 
-      <p className="project-section-label">
-        <span>Emploi actuel</span>
-        Sinéliance
-      </p>
+      <div className="project-block">
+        <p className="project-section-label">
+          <span>Emploi actuel</span>
+          Sinéliance
+        </p>
+        <ProjectItem
+          logoImage={sinelianceLogo}
+          description="Sinéliance accompagne les entreprises dans la préservation et la transmission de leurs savoir-faire critiques. Le site vitrine présente les différentes offres et expertises pour éviter la perte de compétences et optimiser la gestion des connaissances."
+          urlGhPages="https://www.sineliance.fr"
+        >
+          <Realizations />
+          <WorkflowDiagram />
+        </ProjectItem>
+      </div>
 
-      <ProjectItem
-        logoImage={sinelianceLogo}
-        description="Sinéliance accompagne les entreprises dans la préservation et la transmission de leurs savoir-faire critiques. Le site vitrine présente les différentes offres et expertises pour éviter la perte de compétences et optimiser la gestion des connaissances."
-        urlGhPages="https://www.sineliance.fr"
-      >
-        <Realizations />
-        <WorkflowDiagram />
-      </ProjectItem>
-
-      <p className="project-section-label">
-        <span>Projet personnel</span>
-        Sound Randomizer
-      </p>
-
-      <ProjectItem
-        mockUpComponent={<SoundRandomizerDemo />}
-        logoComponent={
-          <div className="sound-logo">
-            <FontAwesomeIcon icon={faVolumeHigh} />
-            <span>Sound Randomizer</span>
-          </div>
-        }
-        description="Sélectionnez un dossier contenant des fichiers MP3 et le programme lancera automatiquement les pistes audio de façon aléatoire, dans un intervalle de temps configurable. Un projet personnel né d'un besoin réel."
-        urlGit="https://github.com/tunsay/Sound_Randomizer"
-        urlGhPages="https://tunsay.github.io/Sound_Randomizer/"
-      />
+      <div className="project-block">
+        <p className="project-section-label">
+          <span>Projet personnel</span>
+          Sound Randomizer
+        </p>
+        <ProjectItem
+          mockUpComponent={<SoundRandomizerDemo />}
+          logoComponent={
+            <div className="sound-logo">
+              <FontAwesomeIcon icon={faVolumeHigh} />
+              <span>Sound Randomizer</span>
+            </div>
+          }
+          description="Sélectionnez un dossier contenant des fichiers MP3 et le programme lancera automatiquement les pistes audio de façon aléatoire, dans un intervalle de temps configurable. Un projet personnel né d'un besoin réel."
+          urlGit="https://github.com/tunsay/Sound_Randomizer"
+          urlGhPages="https://tunsay.github.io/Sound_Randomizer/"
+        />
+      </div>
     </div>
   )
 }
