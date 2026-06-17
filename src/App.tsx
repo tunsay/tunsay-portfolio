@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <React.Fragment>
-      <BrowserRouter basename="/tunsay-portfolio">
+      <BrowserRouter basename="/tunsay-portfolio" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Header />
         <ParallaxProvider>
           <Routes>

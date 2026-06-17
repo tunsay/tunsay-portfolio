@@ -1,59 +1,174 @@
 @import './variables.scss';
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+/* ── Pill header ─────────────────────────────────── */
+
+.header {
   position: fixed;
-  background-color: $primary-color;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
   z-index: 1000;
-  top: 0;
-  left: 0;
-  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.55rem 0.75rem 0.55rem 1.25rem;
+  border-radius: 50px;
+  white-space: nowrap;
+
+  background: transparent;
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.35s ease,
+    border-color 0.35s ease,
+    backdrop-filter 0.35s ease;
+
+  &--scrolled {
+    background: rgba(18, 18, 18, 0.72);
+    border-color: rgba(255, 255, 255, 0.08);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+  }
+
+  &--hidden {
+    transform: translateX(-50%) translateY(-160%);
+  }
 }
 
-header h1 {
-  margin: 0;
-  font-weight: normal;
+/* ── Name ───────────────────────────────────────── */
+
+.header__name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.01em;
+  padding-right: 0.5rem;
 }
 
-.personal-info {
-  margin: 0;
+/* ── Desktop nav ────────────────────────────────── */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+
+  a {
+    font-size: 0.8rem;
+    padding: 0.38rem 0.9rem;
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
 }
 
-.header-bar {
+/* ── Burger button ──────────────────────────────── */
+
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  span {
+    display: block;
+    width: 16px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  &.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  &.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+}
+
+/* ── Mobile overlay menu ────────────────────────── */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(12, 12, 12, 0.97);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-nav {
-  display: flex;
-  align-items: center;
-}
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 
-nav a {
-  margin: 0 30px;
-  transition: all 0.2s ease-out;
-  padding: 3px;
-}
-
-nav a:hover {
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) inset;
-}
-
-@media screen and (max-width: 1024px) {
-  header {
-    position: static;
+  nav {
+    display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
+    gap: 2.5rem;
   }
-  header h1 {
-    font-size: 15px;
+
+  a {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.03em;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: color 0.2s ease, opacity 0.35s ease, transform 0.35s ease;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.95);
+    }
   }
-  nav a {
-    margin: 1px;
-    padding-top: 10px;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+
+    a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media screen and (max-width: 768px) {
+  .header {
+    top: 12px;
+    padding: 0.45rem 0.45rem 0.45rem 1rem;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
   }
 }

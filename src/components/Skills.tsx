@@ -1,4 +1,5 @@
 import './Skills.scss'
+import ExpertiseCards from './ExpertiseCards'
 
 const skillGroups = [
   {
@@ -73,6 +74,7 @@ function Skills() {
           </div>
         ))}
       </div>
+      <ExpertiseCards />
     </div>
   )
 }
