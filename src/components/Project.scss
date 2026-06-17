@@ -21,15 +21,34 @@
   margin-bottom: 0;
 }
 
+.project-item--centered {
+  justify-content: center;
+
+  .right {
+    width: 100%;
+    max-width: 720px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .desc {
+    text-align: center;
+  }
+}
+
 .project-item .right {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  gap: 2rem;
 }
 
 .right .desc {
   background-color: rgba(20, 20, 20, 0.5);
+  line-height: 1.7;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
 }
 
 .right .logo img {

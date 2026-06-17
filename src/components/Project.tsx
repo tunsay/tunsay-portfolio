@@ -1,6 +1,8 @@
 import './Project.scss'
 import { Parallax } from 'react-scroll-parallax'
 import sinelianceLogo from '../assets/Sineliance.svg'
+import WorkflowDiagram from './WorkflowDiagram'
+import Realizations from './Realizations'
 
 interface ProjectItemProps {
   mockUpImage: string
@@ -37,50 +39,41 @@ function ProjectItem({
   urlGhPages,
   urlGhPages2,
 }: ProjectItemProps) {
+  const hasMockup = !!mockUpImage
+
   return (
-    <div className="project-item">
-      <Parallax speed={5} scale={[0.9, 1.2]}>
-        <div className="left">
-          <img src={mockUpImage} alt="" />
-        </div>
-      </Parallax>
+    <div className={`project-item ${hasMockup ? '' : 'project-item--centered'}`}>
+      {hasMockup && (
+        <Parallax speed={5} scale={[0.9, 1.2]}>
+          <div className="left">
+            <img src={mockUpImage} alt="" />
+          </div>
+        </Parallax>
+      )}
       <div className="right">
         <div className="logo">
-          <Parallax translateX={['-300px', '0px']} easing={[0, 1, 1, 1]}>
+          <Parallax translateY={['-20px', '10px']} opacity={[0.4, 1]} easing="easeOutQuad">
             <img src={logoImage} alt="" />
           </Parallax>
         </div>
-        <Parallax translateY={['30px', '0px']} easing={[0, 1, 1, 1]}>
+        <Parallax translateY={['20px', '0px']} opacity={[0.3, 1]} easing="easeOutQuad">
           <div className="desc">{description}</div>
         </Parallax>
+        <Realizations />
+        <WorkflowDiagram />
         <div className="link-row">
           {urlGit && (
-            <a
-              className="link-github"
-              href={urlGit}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="link-github" href={urlGit} target="_blank" rel="noopener noreferrer">
               Voir Repo
             </a>
           )}
           {urlGhPages && (
-            <a
-              className="link-github"
-              href={urlGhPages}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="link-github" href={urlGhPages} target="_blank" rel="noopener noreferrer">
               Visiter le Site
             </a>
           )}
           {urlGhPages2 && (
-            <a
-              className="link-github"
-              href={urlGhPages2}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a className="link-github" href={urlGhPages2} target="_blank" rel="noopener noreferrer">
               Voir Projet 2
             </a>
           )}
